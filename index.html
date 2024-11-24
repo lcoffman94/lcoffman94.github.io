@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your sleep in 30 days with personalized coaching. Wake up energized and improve your sleep with expert tips, hacks, and routines.">
+    <meta name="keywords" content="sleep coaching, sleep optimization, better sleep, Andrew Huberman sleep hacks">
+    <meta name="author" content="Logan's Wellness Coaching">
+    <title>30-Day Sleep Optimization Coaching</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        header {
+            position: relative;
+            background: url('file:///Users/logancoffman/Downloads/slumber-sleep-aid-kh2VDcogqog-unsplash%20(2).jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 140px 20px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+            z-index: 0;
+        }
+
+        header h1 {
+            position: relative;
+            font-size: 58px;
+            margin: 0;
+            font-weight: 700;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        header p {
+            position: relative;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 20px 0 40px;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .btn-primary {
+            position: relative;
+            z-index: 1;
+            background: #FF6B35;
+            color: white;
+            padding: 20px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .btn-primary:hover {
+            background: #FF7D47;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #001F54;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 18px;
+            color: #555;
+            text-align: left;
+            line-height: 1.8;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .testimonial {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .email-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .email-form button {
+            width: 100%;
+            background: #FF6B35;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .email-form button:hover {
+            background: #FF7D47;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 300px;
+            max-width: 300px;
+            margin-right: 10px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slide h3 {
+            font-size: 20px;
+            color: #001F54;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .carousel-slide p {
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        footer a {
+            color: #FF7D47;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>30-Day Sleep Optimization Coaching</h1>
+    <p>Wake up energized and take control of your day with personalized sleep coaching.</p>
+    <a href="#lead-capture" class="btn-primary">Schedule Free Consultation</a>
+</header>
+
+<div class="main-container">
+    <div class="section">
+        <h2 class="section-title">Restorative Sleep is Transformational</h2>
+        <p class="section-content">Data supports the fact that there is no greater investment than an investment into improving the quality and duration of your sleep. Enhanced mood, boundless productivity. Get more out of life. Let’s get started.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">What You'll Get</h2>
+        <div class="section-content">
+            <p><strong>Build a nighttime routine for better rest:</strong> Creating a routine for the last 2 hours of your day is one of the most fundamental ways to positively impact your sleep score.</p>
+            <p><strong>Supplementation stack, tools to enhance sleep quality:</strong> Supplements are not a silver bullet to improving sleep quality but they can help regulate your nervous system and significantly increase the odds you will enter deep & REM sleep cycles.</p>
+            <p><strong>Lifestyle changes to better align with your circadian rhythm:</strong> Changing behaviors such as wake and sleep time, and meal planning to let your digestion slow down assists with properly aligning with your circadian clock.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Sign Up for Early Access</h2>
+        <form id="email-form" class="email-form">
+            <input type="email" id="email" placeholder="Enter your email address" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">As Seen In</h2>
+        <div class="section-content" style="text-align: center;">
+            <img src="file:///Users/logancoffman/Downloads/nytimes-ar21.svg" alt="NYT">
+            <img src="file:///Users/logancoffman/Desktop/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc=.jpeg" alt="Huberman">
+            <img src="file:///Users/logancoffman/Desktop/how%20I%20buitl.png" alt="NPR">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">What Others Are Saying</h2>
+        <div class="testimonial">
+            <p>"After just two weeks, I noticed a massive difference in my energy levels. This program works!"</p>
+            <cite>- Sarah L.</cite>
+        </div>
+        <div class="testimonial">
+            <p>"I went from struggling to fall asleep to getting a full night's rest. Highly recommend!"</p>
+            <cite>- John M.</cite>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Recent Blog Posts</h2>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <h3>Why Blue Light Might Be Ruining Your Sleep</h3>
+                    <p>Discover how blue light impacts your sleep and practical ways to combat its effects.</p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>3 Supplements to Improve Deep Sleep</h3>
+                    <p>Explore the top supplements to help you achieve deeper, more restorative sleep.</p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>Andrew Huberman’s Top 3 Sleep Hacks</h3>
+                    <p>Learn actionable sleep hacks from the renowned neuroscientist Andrew Huberman.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Logan's Wellness Coaching. <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+    // Email validation
+    document.getElementById('email-form').addEventListener('submit', function(event) {
+        const email = document.getElementById('email').value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            event.preventDefault();
+        }
+    });
+
+    // Scroll-triggered fade-in effect
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Blog carousel
+    const carouselTrack = document.querySelector('.carousel-track');
+    let carouselIndex = 0;
+
+    function autoScrollCarousel() {
+        carouselIndex = (carouselIndex + 1) % carouselTrack.children.length;
+        carouselTrack.style.transform = `translateX(-${carouselIndex * 310}px)`;
+    }
+
+    setInterval(autoScrollCarousel, 3000);
+</script>
+
+</body>
+</html>
+
+
+
